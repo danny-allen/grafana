@@ -1,0 +1,117 @@
+package: dao/grafana
+import:
+- package: github.com/BurntSushi/toml
+- package: github.com/Unknwon/com
+- package: github.com/aws/aws-sdk-go
+  subpackages:
+  - aws
+  - aws/awsutil
+  - aws/credentials
+  - aws/credentials/ec2rolecreds
+  - aws/ec2metadata
+  - aws/session
+  - service/cloudwatch
+  - service/ec2
+  - service/sts
+- package: github.com/benbjohnson/clock
+- package: github.com/codegangsta/cli
+- package: github.com/davecgh/go-spew
+  subpackages:
+  - spew
+- package: github.com/fatih/color
+- package: github.com/go-ldap/ldap
+- package: github.com/go-macaron/binding
+- package: github.com/go-macaron/gzip
+- package: github.com/go-macaron/session
+  subpackages:
+  - memcache
+  - mysql
+  - postgres
+  - redis
+- package: github.com/go-sql-driver/mysql
+- package: github.com/go-stack/stack
+- package: github.com/go-xorm/xorm
+- package: github.com/gorilla/websocket
+- package: github.com/gosimple/slug
+- package: github.com/grafana/grafana
+  subpackages:
+  - pkg/api
+  - pkg/api/avatar
+  - pkg/api/cloudwatch
+  - pkg/api/dtos
+  - pkg/api/live
+  - pkg/api/pluginproxy
+  - pkg/api/static
+  - pkg/bus
+  - pkg/cmd/grafana-cli/commands
+  - pkg/cmd/grafana-cli/logger
+  - pkg/cmd/grafana-cli/models
+  - pkg/cmd/grafana-cli/services
+  - pkg/cmd/grafana-cli/utils
+  - pkg/components/apikeygen
+  - pkg/components/imguploader
+  - pkg/components/renderer
+  - pkg/components/securejsondata
+  - pkg/components/simplejson
+  - pkg/events
+  - pkg/log
+  - pkg/login
+  - pkg/metrics
+  - pkg/middleware
+  - pkg/models
+  - pkg/plugins
+  - pkg/services/alerting
+  - pkg/services/alerting/conditions
+  - pkg/services/alerting/notifiers
+  - pkg/services/annotations
+  - pkg/services/cleanup
+  - pkg/services/eventpublisher
+  - pkg/services/notifications
+  - pkg/services/search
+  - pkg/services/sqlstore
+  - pkg/services/sqlstore/migrations
+  - pkg/services/sqlstore/migrator
+  - pkg/setting
+  - pkg/social
+  - pkg/tsdb
+  - pkg/tsdb/graphite
+  - pkg/tsdb/influxdb
+  - pkg/tsdb/mqe
+  - pkg/tsdb/opentsdb
+  - pkg/tsdb/prometheus
+  - pkg/tsdb/testdata
+  - pkg/util
+- package: github.com/hashicorp/go-version
+- package: github.com/inconshreveable/log15
+  subpackages:
+  - term
+- package: github.com/kr/s3
+  subpackages:
+  - s3util
+- package: github.com/lib/pq
+- package: github.com/mattn/go-sqlite3
+- package: github.com/patrickmn/go-cache
+- package: github.com/prometheus/client_golang
+  subpackages:
+  - api/prometheus
+- package: github.com/prometheus/common
+  subpackages:
+  - model
+- package: github.com/streadway/amqp
+- package: golang.org/x/net
+  subpackages:
+  - context
+  - context/ctxhttp
+- package: golang.org/x/oauth2
+- package: golang.org/x/sync
+  subpackages:
+  - errgroup
+- package: gopkg.in/gomail.v2
+- package: gopkg.in/guregu/null.v3
+- package: gopkg.in/ini.v1
+- package: gopkg.in/macaron.v1
+testImport:
+- package: github.com/bmizerany/assert
+- package: github.com/smartystreets/goconvey
+  subpackages:
+  - convey
