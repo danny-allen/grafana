@@ -66,7 +66,7 @@ var (
 	SshPort            int
 	CertFile, KeyFile  string
 	RouterLogging      bool
-	DataProxyLogging       bool
+	DataProxyLogging   bool
 	StaticRootPath     string
 	EnableGzip         bool
 	EnforceDomain      bool
