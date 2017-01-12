@@ -6,8 +6,11 @@ cd $GOPATH/src/github.com/grafana/grafana
 
 # Front end build
 echo "--- Building the front end. ---"
-sudo rm -rf public_gen # .
-grunt build # Build afresh.
+sudo rm -rf public_gen  # Fix for permission issue. Shouldn't really need.
+grunt build
+sudo npm install -g yarn
+yarn install
+sudo npm run build
 
 # Build the application (Go).
 echo "--- Building the Go application. ---"
