@@ -15,6 +15,12 @@ then
   echo "Error: You must specify a version."
 fi
 
+# Check for GOPATH.
+if [ -z "$GOPATH" ]
+then
+  echo "Error: You must configure your GOPATH."
+fi
+
 # Go to Grafana, which is symlinked to the custom version.
 echo "--- Changing directory to the Grafana go project. ---"
 cd $GOPATH/src/github.com/grafana/grafana
@@ -29,9 +35,7 @@ git remote set-url upstream https://github.com/grafana/grafana.git
 git fetch upstream
 git fetch --tags upstream
 
-
-
-# then: (like "git pull" which is fetch + merge)
+# Rebase commit from version.
 git rebase $(git rev-parse $VERSION) master
 
 # or, better, replay your local work on top of the fetched branch
